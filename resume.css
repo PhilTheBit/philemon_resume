@@ -1,0 +1,114 @@
+body {
+  background-color: #F2F2F2;
+  font-family: "Libre Baskerville", serif;
+}
+
+.shared-style {
+  border-radius: 5px;
+}
+
+.profile-picture {
+  justify-content: flex-start;
+  display: flex;
+  border: 1px solid gray;
+  margin-bottom: 20px;  /* Add margin below profile section */
+}
+
+.profile-image {
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid gray;  /* Make border visible */
+  border-radius: 200px;
+}
+
+.contact-details {
+align-items: center;
+text-align: center;
+padding-bottom: 20px;
+}
+
+
+/* For paragraphs */
+p {
+  margin: 2px 0;
+  font-size: 14px;  /* Slightly larger for readability */
+  padding-left: 10px;
+}
+
+/* For headings */
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #096B68;
+}
+
+.entry {
+    margin-bottom: 15px;
+}
+
+.year {
+    display: inline-block;
+    width: 100px; /* Adjust this to align the text properly */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 120px; /* Aligns the list items with the content after the year */
+    margin: 0;
+}
+@media (max-width:2000px){
+ body {
+  font-size: 15px;
+ }
+}
+.philthebit-footer {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.bit-span {
+  color: rgb(0, 89, 255);
+}
+.objective-heading {
+  text-align: center;
+}
+.personal-data-details {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.residential-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    padding-bottom: 50px;
+  }
+  .residential-details h1 {
+    margin-bottom: 10px;
+  }
+  .home-button {
+    background-color: rgb(0, 85, 255);
+    color: white;
+    border-radius: 10px;
+  }
+  .home-button:hover {
+    cursor: pointer;
+    background-color: plum;
+  }
+  /* Home Page*/
+  .navbar-brand {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;    
+}
+.motivation-button {
+  border-color: gray;
+  border-radius: 5px;
+  width: 150px;
+  height: 60px;
+  background-color: rgb(0, 145, 255);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.year {
+  font-size: 15px;
+  color: black;
+}

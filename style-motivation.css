@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+}
+#container {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 100px;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+}
+.image {
+  width: 100%;
+  border: 10px solid white;
+
+}
+.paragraph-one, .paragraph-two {
+font-family: "Libre Baskerville", serif;
+color: white;
+text-align: center;
+}
+.paragraph-one {
+  text-transform: uppercase;
+}
+.paragraph-two {
+  font-size: 10px;
+}
+.home-button {
+    background-color: rgb(0, 85, 255);
+    color: white;
+    border-radius: 10px;
+  }
+  .home-button:hover {
+    cursor: pointer;
+    background-color: plum;
+  }
+   
