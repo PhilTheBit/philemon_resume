@@ -1,8 +1,9 @@
 body {
-  background-color: #F2F2F2;
+  background-color: #f9f9f9;
   font-family: "Libre Baskerville", serif;
 }
 
+/* General shared styles */
 .shared-style {
   border-radius: 5px;
 }
@@ -22,20 +23,20 @@ body {
 }
 
 .contact-details {
-align-items: center;
-text-align: center;
-padding-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
-
-/* For paragraphs */
+/* Paragraphs */
 p {
   margin: 2px 0;
-  font-size: 14px;  /* Slightly larger for readability */
+  font-size: 13px;
   padding-left: 10px;
+  color: #555;
 }
 
-/* For headings */
+/* Headings */
 h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold;
@@ -43,72 +44,164 @@ h1, h2, h3 {
 }
 
 .entry {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .year {
-    display: inline-block;
-    width: 100px; /* Adjust this to align the text properly */
+  display: inline-block;
+  width: 100px; /* Adjust this to align the text properly */
+  font-size: 15px;
+  color: black;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 120px; /* Aligns the list items with the content after the year */
-    margin: 0;
+  list-style-type: disc;
+  padding-left: 120px; /* Aligns the list items with the content after the year */
+  margin: 0;
 }
-@media (max-width:2000px){
- body {
-  font-size: 15px;
- }
+
+/* Media query for adjusting font size */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
 }
+
+/* Footer */
 .philthebit-footer {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
+
 .bit-span {
   color: rgb(0, 89, 255);
 }
+
 .objective-heading {
   text-align: center;
 }
+
 .personal-data-details {
   padding-left: 10px;
   padding-bottom: 10px;
 }
+
 .residential-details {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; 
-    padding-bottom: 50px;
-  }
-  .residential-details h1 {
-    margin-bottom: 10px;
-  }
-  .home-button {
-    background-color: rgb(0, 85, 255);
-    color: white;
-    border-radius: 10px;
-  }
-  .home-button:hover {
-    cursor: pointer;
-    background-color: plum;
-  }
-  /* Home Page*/
-  .navbar-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  padding-bottom: 50px;
+}
+
+.residential-details h1 {
+  margin-bottom: 10px;
+}
+
+.home-button {
+  background-color: rgb(0, 85, 255);
+  color: white;
+  border-radius: 5px;
+}
+
+.home-button:hover {
+  cursor: pointer;
+  background-color: skyblue;
+}
+
+.home-button:active {
+  background-color: rgb(46, 135, 170);
+}
+
+/* Navbar Brand */
+.navbar-brand {
   display: flex;
   gap: 5px;
-  font-weight: bold;    
+  font-weight: bold;
+  font-size: 20px;
+  color: #ecf0f1;
 }
+
+.navbar-nav .nav-link {
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1270f3;
+}
+
+/* Motivation button */
 .motivation-button {
-  border-color: gray;
-  border-radius: 5px;
-  width: 150px;
-  height: 60px;
-  background-color: rgb(0, 145, 255);
+  border-color: #4C9BFF;
+  border-radius: 30px;
+  width: 180px;
+  height: 70px;
+  background-color: #4C9BFF;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
-.year {
-  font-size: 15px;
-  color: black;
+
+.motivation-button:hover {
+  transform: scale(1.1);
+}
+
+/* Carousel styling */
+#carouselExampleFade {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 60vh;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-img:hover {
+  transform: scale(1.05); /* Subtle zoom-in effect */
+}
+
+.carousel-inner {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.custom-carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.custom-carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-carousel-control .carousel-control-prev-icon,
+.custom-carousel-control .carousel-control-next-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Make the carousel responsive */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 40vh;
+  }
 }

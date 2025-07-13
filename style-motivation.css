@@ -32,6 +32,6 @@ text-align: center;
   }
   .home-button:hover {
     cursor: pointer;
-    background-color: plum;
+    background-color: rgb(160, 205, 221);
   }
    
