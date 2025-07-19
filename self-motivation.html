@@ -1,21 +1,34 @@
-HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motivation Project</title>
-  <link rel="stylesheet" href="style-motivation.css">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style-motivation.css">
+  
+  <!-- Icons (optional for home button if you want SVG replaced with icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <button onclick="location.href='index.html'" class="home-button"><img src="./images/house.svg" alt="Home"></button>
-  <div id="container">
-<img class="image" src="./images/1000045081.jpg" alt="PhilemonGumede">
-<h1 class="paragraph-one">Learn. Build. Persist.</h1>
-<h2 class="paragraph-two">Code your way forward—one bug, one breakthrough at a time</h2>
-  </div>
+  
+  <!-- Home Button -->
+  <button onclick="location.href='index2.html'" class="home-button" aria-label="Go Home">
+    <img src="./images/house.svg" alt="Home" class="home-icon">
+  </button>
+
+  <!-- Container -->
+  <main id="container">
+    <img class="image" src="./images/1000045081.jpg" alt="Philemon Gumede">
+    <h1 class="paragraph-one">Learn. Build. Persist.</h1>
+    <h2 class="paragraph-two">Code your way forward—one bug, one breakthrough at a time.</h2>
+  </main>
+
 </body>
 </html>

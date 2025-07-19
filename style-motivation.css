@@ -1,37 +1,83 @@
-body {
-  background-color: black;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#container {
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 100px;
-  color: white;
+
+body {
+  background-color: #000;
+  color: #fff;
   font-family: "Libre Baskerville", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
   text-align: center;
 }
+
+/* Home Button */
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #0055ff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.home-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.home-button:hover {
+  background-color: #a0cddd;
+  cursor: pointer;
+}
+
+/* Container */
+#container {
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Image */
 .image {
   width: 100%;
-  border: 10px solid white;
+  border: 8px solid #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
 
-}
-.paragraph-one, .paragraph-two {
-font-family: "Libre Baskerville", serif;
-color: white;
-text-align: center;
-}
+/* Text */
 .paragraph-one {
+  font-size: 2rem;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
+
 .paragraph-two {
-  font-size: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ccc;
 }
-.home-button {
-    background-color: rgb(0, 85, 255);
-    color: white;
-    border-radius: 10px;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .paragraph-one {
+    font-size: 1.5rem;
   }
-  .home-button:hover {
-    cursor: pointer;
-    background-color: rgb(160, 205, 221);
+
+  .paragraph-two {
+    font-size: 0.9rem;
   }
-   
+}
+

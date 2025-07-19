@@ -1,29 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-   <link rel="stylesheet" href="resume.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact - Philemon Mbongeni Gumede</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
+
+<!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="resume.css">
+
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Libre Baskerville', serif;
+    margin: 0; padding: 0;
+    background-color: #121212;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #66aaff;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+  .container {
+    max-width: 600px;
+    margin: 2rem auto 4rem;
+    padding: 1rem 2rem;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000a;
+  }
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 500;
+    color: #77aaff;
+    margin-top: 2rem;
+  }
+  hr {
+    border: none;
+    height: 2px;
+    background: #77aaff;
+    margin: 0.5rem 0 2rem;
+    border-radius: 2px;
+  }
+  address {
+    font-style: normal;
+    line-height: 1.6;
+  }
+  address p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.7rem 0;
+    font-size: 1.1rem;
+  }
+  address p i {
+    color: #77aaff;
+    min-width: 24px;
+    font-size: 1.3rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  label {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  input, textarea {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #555;
+    background-color: #222;
+    color: #eee;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #77aaff;
+    box-shadow: 0 0 8px #77aaffaa;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  button[type="submit"] {
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button[type="submit"]:hover, button[type="submit"]:focus {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    outline: none;
+  }
+  .contact-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    color: #aaa;
+  }
+  .contact-note a {
+    color: #77aaff;
+  }
+  /* Home button */
+  header {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    background: #1e1e1e;
+    box-shadow: 0 2px 6px #0008;
+  }
+  .home-button {
+    background: #77aaff;
+    color: #121212;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  .home-button:hover, .home-button:focus {
+    background: #a3c7ff;
+    outline: none;
+  }
+  .home-button img {
+    width: 20px;
+    height: 20px;
+  }
+  /* Dark/Light toggle */
+  .toggle-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    user-select: none;
+  }
+  .toggle-container button {
+    background: none;
+    border: 2px solid #77aaff;
+    color: #77aaff;
+    border-radius: 30px;
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .toggle-container button:hover, .toggle-container button:focus {
+    background: #77aaff;
+    color: #121212;
+    outline: none;
+  }
+
+  /* LIGHT MODE */
+  body.light-mode {
+    background-color: #f9f9f9;
+    color: #212121;
+  }
+  body.light-mode .container {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px #0000001f;
+    color: #212121;
+  }
+  body.light-mode address p i {
+    color: #1d4ed8;
+  }
+  body.light-mode a {
+    color: #1d4ed8;
+  }
+  body.light-mode input, body.light-mode textarea {
+    background-color: #f0f4ff;
+    border-color: #a5b4fc;
+    color: #212121;
+  }
+  body.light-mode input:focus, body.light-mode textarea:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 8px #3b82f6aa;
+  }
+  body.light-mode button[type="submit"] {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    color: white;
+  }
+  body.light-mode button[type="submit"]:hover {
+    background: linear-gradient(45deg, #1d4ed8, #2563eb);
+  }
+  body.light-mode header {
+    background: #e2e8f0;
+    box-shadow: 0 2px 6px #00000033;
+  }
+  body.light-mode .home-button {
+    background: #2563eb;
+    color: white;
+  }
+  body.light-mode .home-button:hover {
+    background: #1e40af;
+  }
+</style>
 </head>
 <body>
-  <button onclick="location.href='index.html'" class="home-button"><img src="./images/house.svg" alt="Home"></button>
-  <hr />
-  <div class="contact-details">
-<h1>Contact Information</h1>
-     <Address>
-    Cell Number: +27682803657 <br>
-    Alternative Contact Number: +27694072548<br>
-    Email Address: philemonmbongenigumede@gmail.com <br>
-    WhatsApp: <a href="https://wa.me/+27682803657">Connect with me on WhatsApp to discuss further</a><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/philemon-mbongeni-gumede-5750442b8">Philemon Mbongeni Gumede</a>
-    </Address>
+  <header>
+    <button class="home-button" aria-label="Go to Home" onclick="location.href='index2.html'">
+      <img src="./images/house.svg" alt="" aria-hidden="true" /> Home
+    </button>
+  </header>
+
+  <div class="toggle-container">
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">Switch to Light Mode</button>
   </div>
-  <hr />
-  
-  <footer>
-      <p class="philthebit-footer"><img src="./images/c-circle (1).svg" alt="C">PhilThe<span class="bit-span">Bit</span> By Philemon Mbongeni Gumede</p>
-    </footer>
+
+  <main class="container" role="main" tabindex="0">
+    <h1>Contact Information</h1>
     <hr />
+
+    <address>
+      <p><i class="fas fa-phone-alt" aria-hidden="true"></i> <strong>Cell Number:</strong> +27 68 280 3657</p>
+      <p><i class="fas fa-mobile-alt" aria-hidden="true"></i> <strong>Alternative Number:</strong> +27 69 407 2548</p>
+      <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <strong>WhatsApp:</strong> 
+        <a href="https://wa.me/+27682803657" target="_blank" rel="noopener noreferrer">Connect with me on WhatsApp</a>
+      </p>
+      <p><i class="fab fa-linkedin" aria-hidden="true"></i> <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/philemon-mbongeni-gumede-5750442b8" target="_blank" rel="noopener noreferrer">Philemon Mbongeni Gumede</a>
+      </p>
+    </address>
+
+    <h2>Send Me a Message</h2>
+    <hr />
+    <form action="https://formspree.io/f/xeozorbe" method="POST" novalidate>
+      <label for="name">Name <span aria-hidden="true" style="color:#ff4c4c">*</span></label>
+      <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
+
+      <label for="email">Email <span aria-hidden="true" style="color:#ff4c4c">*</span></label>
+      <input type="email" id="email" name="_replyto" required autocomplete="email" placeholder="your.email@example.com" />
+
+      <label for="message">Message <span aria-hidden="true" style="color:#ff4c4c">*</span></label>
+      <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p class="contact-note" style="margin-top: 1.5rem; font-style: italic; text-align:center;">
+      Or email me directly at <a href="mailto:philemonmbongenigumede@gmail.com">philemonmbongenigumede@gmail.com</a>
+    </p>
+  </main>
+  <footer class="footer container">
+    <hr class="divider" />
+    <p class="philthebit-footer">
+      <img src="./images/c-circle (1).svg" alt="Copyright symbol" />
+      PhilThe<span class="bit-span">Bit</span> By Philemon Mbongeni Gumede
+    </p>
+    <hr class="divider" />
+  </footer>
+<script>
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check localStorage for theme preference
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    themeToggleBtn.textContent = 'Switch to Dark Mode';
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    if (body.classList.contains('light-mode')) {
+      themeToggleBtn.textContent = 'Switch to Dark Mode';
+      localStorage.setItem('theme', 'light');
+    } else {
+      themeToggleBtn.textContent = 'Switch to Light Mode';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
 </body>
 </html>
